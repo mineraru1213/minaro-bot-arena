@@ -1,0 +1,249 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: #050a14;
+  color: white;
+  font-family: Arial, sans-serif;
+  touch-action: none;
+  user-select: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #050a14;
+}
+
+#loading h1,
+#start-screen h1 {
+  font-size: 48px;
+  letter-spacing: 10px;
+  color: #55dfff;
+  text-shadow: 0 0 25px #00bfff;
+}
+
+#loading p,
+#start-screen h2 {
+  letter-spacing: 8px;
+  margin-top: 8px;
+}
+
+#loading span {
+  margin-top: 40px;
+  color: #55dfff;
+  font-size: 12px;
+}
+
+#hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hud-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hud-box {
+  background: #061626cc;
+  border: 1px solid #36cfff;
+  padding: 10px 18px;
+  min-width: 100px;
+}
+
+.hud-box small {
+  display: block;
+  color: #70dfff;
+  font-size: 10px;
+}
+
+.hud-box strong {
+  display: block;
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 28px;
+  text-shadow: 0 0 8px #00d9ff;
+}
+
+#ammo {
+  position: absolute;
+  right: 25px;
+  bottom: 125px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#ammo small {
+  color: #8ba9bc;
+  font-size: 15px;
+}
+
+#controls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#joystick {
+  position: absolute;
+  left: 30px;
+  bottom: 35px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #56dfff88;
+  background: #0c345566;
+  border-radius: 50%;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+#stick {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #54dfffcc;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px #00bfff;
+}
+
+#look-area {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 60%;
+  height: 65%;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+#controls button {
+  position: absolute;
+  pointer-events: auto;
+  border: 1px solid #4edfff;
+  background: #062b47cc;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  touch-action: none;
+}
+
+#fire {
+  right: 30px;
+  bottom: 35px;
+  width: 85px;
+  height: 85px;
+  font-size: 16px;
+}
+
+#reload {
+  right: 125px;
+  bottom: 55px;
+  width: 65px;
+  height: 65px;
+  font-size: 10px;
+}
+
+#jump {
+  right: 125px;
+  bottom: 135px;
+  width: 55px;
+  height: 55px;
+  font-size: 10px;
+}
+
+#start-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: radial-gradient(circle, #123b58, #050a14 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+#start-screen p {
+  color: #7bdfff;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+#start-button {
+  margin-top: 35px;
+  padding: 17px 45px;
+  background: #0a9fd0;
+  color: white;
+  border: 1px solid #8ceaff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#start-screen small {
+  margin-top: 20px;
+  color: #8ba9bc;
+  font-size: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #controls {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hud-top {
+    padding: 12px;
+  }
+
+  .hud-box {
+    padding: 7px 12px;
+    min-width: 85px;
+  }
+
+  #ammo {
+    bottom: 115px;
+    right: 15px;
+  }
+}
