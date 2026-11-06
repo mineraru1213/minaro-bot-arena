@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MINARO: BOT ARENA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading">
+    <h1>MINARO</h1>
+    <p>BOT ARENA</p>
+    <span>LOADING...</span>
+  </div>
+
+  <div id="game">
+    <div id="hud">
+      <div class="hud-top">
+        <div class="hud-box">
+          <small>HEALTH</small>
+          <strong id="health">100</strong>
+        </div>
+        <div class="hud-box">
+          <small>ELIMINATIONS</small>
+          <strong id="kills">0</strong>
+        </div>
+      </div>
+
+      <div id="crosshair">+</div>
+
+      <div id="ammo">
+        <span id="ammo-count">30</span>
+        <small>/ 30</small>
+      </div>
+
+      <div id="controls">
+        <div id="joystick">
+          <div id="stick"></div>
+        </div>
+
+        <div id="look-area"></div>
+
+        <button id="fire">FIRE</button>
+        <button id="reload">RELOAD</button>
+        <button id="jump">JUMP</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="start-screen">
+    <h1>MINARO</h1>
+    <h2>BOT ARENA</h2>
+    <p>3D SCI-FI COMBAT</p>
+    <button id="start-button">START GAME</button>
+    <small>WASD / MOUSE · TOUCH CONTROL</small>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
